@@ -5,10 +5,10 @@ class myPila:
         self.data =[]
 
     def push(algo):
-        pass
+        pass  # TODO **********
 
     def pop(): # -> algo
-        pass
+        pass # TODO ************
 
 
 if __name__ == "__main__":
