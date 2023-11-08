@@ -32,6 +32,7 @@ class myCola:
         return self.altura == self.capacidad
 
     def vaciar(self):
+        self.buffer = [None] * self.capacidad
         self.altura = 0
 
 
