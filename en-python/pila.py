@@ -34,6 +34,7 @@ class myPila:
     def vaciar(self):
         self.altura = 0
 
+
 if __name__ == "__main__":
 
     p = myPila(3)
@@ -61,3 +62,5 @@ if __name__ == "__main__":
 
     p.vaciar()
     print(f"{p}: {p.altura}")
+
+    # p.altura = -4 # falta de privacidad
