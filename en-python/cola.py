@@ -66,8 +66,32 @@ if __name__ == "__main__":
     print(f"{p}: {p.altura}")
     p.pop()
     print(f"{p}: {p.altura}")
+    p.pop()
+    print(f"{p}: {p.altura}")
+    p.pop()
+    print(f"{p}: {p.altura}")
+    p.pop()
+    print(f"{p}: {p.altura}")
 
-    # p.vaciar()
-    # print(f"{p}: {p.altura}")
+    if p.push(66):
+        print("push ok")
+    print(f"{p}: {p.altura}")
+
+    if p.push(77):
+        print("push ok")
+    print(f"{p}: {p.altura}")
+    if p.push(99):
+        print("push ok")
+    print(f"{p}: {p.altura}")   
+    if p.push(111):
+        print("push ok")
+    print(f"{p}: {p.altura}")   
+    if p.push(222):
+        print("push ok")
+    print(f"{p}: {p.altura}")   
+
+
+    p.vaciar()
+    print(f"{p}: {p.altura}")
 
     # p.altura = -4 # falta de privacidad
