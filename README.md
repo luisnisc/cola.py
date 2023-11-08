@@ -9,7 +9,7 @@
 clase pila:
 
     nuevaPila(capacidad) -> pila
-    str() -> str
+    str() -> str  // TODO en la version C++
 
     push(item) -> boolean # success status
     pop() -> item / None  # not-success status)

@@ -6,38 +6,55 @@ class Stack
 {
 private:
     int arr[MAX_SIZE];
-    int top;
+    int altura; // posicion de la siguiente entrada
 
 public:
     Stack()
     {
-        top = -1; // means EMPTY
+        altura = 0; // means EMPTY
     }
     bool isEmpty()
     {
-        return (top == -1);
+        return (altura == 0);
     }
     bool isFull()
     {
-        return (top == MAX_SIZE - 1);
+        return (altura == MAX_SIZE);
     }
     void push(int element)
     {
-        top++;
-        arr[top] = element;
-        // if (!isFull())
-        // {
-        //     top++;
-        //     arr[top] = element;
-        // }
+        if (!isFull())
+        {
+            arr[altura] = element;
+            altura++;
+        }
     }
+    void pop()
+    {
+        if (!isEmpty())
+        {
+            int popped = arr[altura - 1];
+            altura--;
+        }
+    }
+    void vaciar()
+    {
+        altura = 0;
+    }
+    int altura()
+    {
+        return altura ;
+    }
+
     friend ostream &operator<<(ostream &os, const Stack &s);
 };
 
 ostream &operator<<(ostream &os, const Stack &s)
 {
-    os << s.top << "[...todo..."
-       << "]";
+    os << s.altura << ": [";
+    for (int i = 0; i < s.altura; i++)
+        os << s.arr[i] << ",";
+    os << "]";
     return os;
 }
 
@@ -52,7 +69,12 @@ int main()
     s.push(22);
     cout << s << endl;
 
+    cout << s.altura() << endl;
+
     s.push(33);
+    cout << s << endl;
+
+    s.pop();
     cout << s << endl;
 
     s.push(44);
@@ -62,5 +84,11 @@ int main()
     cout << s << endl;
 
     s.push(66);
+    cout << s << endl;
+
+    s.push(77);
+    cout << s << endl;
+
+    s.vaciar();
     cout << s << endl;
 }
