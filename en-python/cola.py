@@ -77,7 +77,6 @@ if __name__ == "__main__":
     if p.push(66):
         print("push ok")
     print(f"{p}: {p.altura}")
-
     if p.push(77):
         print("push ok")
     print(f"{p}: {p.altura}")
@@ -91,7 +90,7 @@ if __name__ == "__main__":
         print("push ok")
     print(f"{p}: {p.altura}")   
 
-
+    print("Vacía:")
     p.vaciar()
     print(f"{p}: {p.altura}")
 
